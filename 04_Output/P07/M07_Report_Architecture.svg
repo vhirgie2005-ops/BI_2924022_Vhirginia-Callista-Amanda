@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050">
+<defs>
+  <style>
+    .title { font: 700 32px Arial, sans-serif; fill: #16324F; }
+    .subtitle { font: 16px Arial, sans-serif; fill: #506477; }
+    .section { font: 700 20px Arial, sans-serif; fill: #16324F; }
+    .cardtitle { font: 700 17px Arial, sans-serif; fill: #16324F; }
+    .body { font: 14px Arial, sans-serif; fill: #263746; }
+    .small { font: 12px Arial, sans-serif; fill: #506477; }
+    .white { fill: #ffffff; }
+    .line { stroke: #6B879D; stroke-width: 2.2; fill: none; }
+    .dash { stroke: #6B879D; stroke-width: 2; stroke-dasharray: 7 6; fill: none; }
+  </style>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L9,3 z" fill="#6B879D"/>
+  </marker>
+</defs>
+<rect width="1600" height="1050" fill="#F5F8FB"/>
+<rect x="0" y="0" width="1600" height="115" fill="#E8F1F8"/>
+<text x="55" y="55" class="title">M07 Report Architecture</text>
+<text x="55" y="84" class="subtitle">Power BI interactive report structure • Based on the dashboard pages and controls shown</text>
+<rect x="1310" y="28" width="235" height="50" rx="12" fill="#16324F"/>
+<text x="1427" y="58" text-anchor="middle" style="font:700 15px Arial;fill:#fff">P07 OUTPUT</text>
+
+<text x="55" y="155" class="section">REPORT PAGES</text>
+<rect x="55" y="175" width="290" height="52" rx="10" fill="#16324F" stroke="#16324F" stroke-width="1.6"/>
+<text x="200" y="207" class="white" text-anchor="middle">Page navigation tabs</text>
+<rect x="55" y="245" width="290" height="78" rx="14" fill="#FFFFFF" stroke="#B9CBD9" stroke-width="1.6"/>
+<text x="72" y="272" class="cardtitle">1. Halaman 1</text>
+<text x="72" y="294" class="small">Detail table / transaction-level fields</text>
+<text x="72" y="311" class="small">Sales, cost, profit, margin, orders, customers</text>
+<rect x="55" y="340" width="290" height="78" rx="14" fill="#FFFFFF" stroke="#B9CBD9" stroke-width="1.6"/>
+<text x="72" y="367" class="cardtitle">2. Executive</text>
+<text x="72" y="389" class="small">KPI cards and monthly trend</text>
+<text x="72" y="406" class="small">Category profit, branch matrix, slicers</text>
+<rect x="55" y="435" width="290" height="78" rx="14" fill="#FFFFFF" stroke="#B9CBD9" stroke-width="1.6"/>
+<text x="72" y="462" class="cardtitle">3. Product &amp; Campaign</text>
+<text x="72" y="484" class="small">Sales by category, month, product</text>
+<text x="72" y="501" class="small">Sales/profit by campaign and margin</text>
+<rect x="55" y="530" width="290" height="78" rx="14" fill="#FFFFFF" stroke="#B9CBD9" stroke-width="1.6"/>
+<text x="72" y="557" class="cardtitle">4. Branch &amp; Customer</text>
+<text x="72" y="579" class="small">Customers and satisfaction by branch</text>
+<text x="72" y="596" class="small">Sales by branch and customer segment</text>
+<rect x="55" y="625" width="290" height="78" rx="14" fill="#FFFFFF" stroke="#B9CBD9" stroke-width="1.6"/>
+<text x="72" y="652" class="cardtitle">5. Branch Detail</text>
+<text x="72" y="674" class="small">Drill-through detail for selected branch</text>
+<text x="72" y="691" class="small">Branch summary and transaction table</text>
+<rect x="55" y="720" width="290" height="78" rx="14" fill="#FFFFFF" stroke="#B9CBD9" stroke-width="1.6"/>
+<text x="72" y="747" class="cardtitle">6. Product Tooltip</text>
+<text x="72" y="769" class="small">Tooltip page with sales/profit KPIs</text>
+<text x="72" y="786" class="small">Monthly sales trend for hover details</text>
+<path d="M200,227 L200,239" class="line"/>
+<path d="M200,239 L200,245" class="line"/>
+<path d="M200,239 L200,340" class="line"/>
+<path d="M200,239 L200,435" class="line"/>
+<path d="M200,239 L200,530" class="line"/>
+<path d="M200,239 L200,625" class="line"/>
+<path d="M200,239 L200,720" class="line"/>
+<path d="M200,239 L365,239 L365,759" class="line" marker-end="url(#arrow)"/>
+<path d="M365,759 L345,759" class="line" marker-end="url(#arrow)"/>
+<text x="405" y="155" class="section">INTERACTION &amp; NAVIGATION</text>
+<rect x="405" y="175" width="500" height="120" rx="14" fill="#FFFFFF" stroke="#8EB5CF" stroke-width="1.6"/>
+<text x="430" y="205" class="cardtitle">Bookmark toggle on Executive page</text>
+<text x="430" y="232" class="body">Fokus Laba  ↔  Fokus Penjualan</text>
+<text x="430" y="256" class="small">Switches the displayed focus/visual state.</text>
+<text x="430" y="276" class="small">Both bookmarks are present in the Bookmark pane.</text>
+<rect x="405" y="320" width="500" height="120" rx="14" fill="#FFFFFF" stroke="#B9CBD9" stroke-width="1.6"/>
+<text x="430" y="350" class="cardtitle">Bookmark Navigator</text>
+<text x="430" y="376" class="body">Two visible buttons: Fokus Laba and Fokus Penjualan</text>
+<text x="430" y="400" class="small">Use the buttons to change the selected bookmark.</text>
+<rect x="405" y="465" width="500" height="120" rx="14" fill="#FFFFFF" stroke="#B9CBD9" stroke-width="1.6"/>
+<text x="430" y="495" class="cardtitle">Page Navigator</text>
+<text x="430" y="521" class="body">Moves between the report pages shown on the canvas.</text>
+<text x="430" y="545" class="small">Tabs: Halaman 1, Executive, Product &amp; Campaign,</text>
+<text x="430" y="563" class="small">Branch &amp; Customer, Branch Detail, Product Tooltip.</text>
+<rect x="405" y="610" width="500" height="120" rx="14" fill="#FFFFFF" stroke="#B9CBD9" stroke-width="1.6"/>
+<text x="430" y="640" class="cardtitle">Slicers and drill-through</text>
+<text x="430" y="666" class="body">Visible filters include Year, Branch, Channel, Region,</text>
+<text x="430" y="688" class="body">Category, and Campaign on relevant pages.</text>
+<text x="430" y="710" class="small">Branch Detail opens a selected branch's details.</text>
+<path d="M345,380 L390,380" class="line" marker-end="url(#arrow)"/>
+<path d="M390,380 L390,235" class="line"/>
+<path d="M390,235 L405,235" class="line" marker-end="url(#arrow)"/>
+<path d="M345,565 L390,565" class="line" marker-end="url(#arrow)"/>
+<path d="M390,565 L390,670" class="line"/>
+<path d="M390,670 L405,670" class="line" marker-end="url(#arrow)"/>
+<text x="965" y="155" class="section">DATA / VISUAL MODEL</text>
+<rect x="965" y="175" width="580" height="180" rx="14" fill="#FFFFFF" stroke="#8EB5CF" stroke-width="1.6"/>
+<text x="990" y="205" class="cardtitle">Measures shown in the Data pane</text>
+<text x="990" y="233" class="body">Total Sales • Gross Profit • Profit Margin</text>
+<text x="990" y="257" class="body">Orders • Customers • Return Rate</text>
+<text x="990" y="281" class="body">Sales Target • Target Achievement % • Avg Satisfaction</text>
+<text x="990" y="324" class="small">Used by KPI cards, charts, and tables.</text>
+<rect x="965" y="380" width="580" height="135" rx="14" fill="#FFFFFF" stroke="#B9CBD9" stroke-width="1.6"/>
+<text x="990" y="410" class="cardtitle">Visible dimension fields</text>
+<text x="990" y="438" class="body">Dim_Branch: Branch_ID, Branch_Name, City,</text>
+<text x="990" y="462" class="body">Employee_Count, Floor Area m²</text>
+<text x="990" y="489" class="small">Transaction fields are shown in detail tables.</text>
+<rect x="965" y="540" width="580" height="190" rx="14" fill="#FFFFFF" stroke="#8EB5CF" stroke-width="1.6"/>
+<text x="990" y="570" class="cardtitle">Main report outputs</text>
+<text x="990" y="599" class="body">Executive performance overview</text>
+<text x="990" y="624" class="body">Product and campaign comparison</text>
+<text x="990" y="649" class="body">Branch and customer analysis</text>
+<text x="990" y="674" class="body">Branch-level drill-through details</text>
+<text x="990" y="699" class="body">Product tooltip with sales trend</text>
+<path d="M905,235 L940,235" class="line" marker-end="url(#arrow)"/>
+<path d="M940,235 L940,260" class="line"/>
+<path d="M940,260 L965,260" class="line" marker-end="url(#arrow)"/>
+<path d="M905,525 L940,525" class="line" marker-end="url(#arrow)"/>
+<path d="M940,525 L940,635" class="line"/>
+<path d="M940,635 L965,635" class="line" marker-end="url(#arrow)"/>
+<rect x="55" y="835" width="1490" height="145" rx="14" fill="#E8F1F8" stroke="#A9C5D8" stroke-width="1.6"/>
+<text x="80" y="870" class="section">ARCHITECTURE NOTES</text>
+<text x="80" y="902" class="body">• The report uses page navigation, bookmark navigation, slicers, drill-through, and a tooltip page.</text>
+<text x="80" y="927" class="body">• Bookmark labels are taken from the dashboard: Fokus Laba and Fokus Penjualan.</text>
+<text x="80" y="952" class="body">• This diagram documents the visible report structure. Verify any hidden fields or relationships in Power BI before final submission.</text>
+<text x="1540" y="1020" class="small" text-anchor="end">M07 • P07</text>
+</svg>

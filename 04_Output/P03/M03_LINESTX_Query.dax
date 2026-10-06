@@ -1,0 +1,6 @@
+EVALUATE
+LINESTX(
+    stg_Fact_Sales_Raw,
+    stg_Fact_Sales_Raw[Revenue],
+    stg_Fact_Sales_Raw[Transaction_Date]
+)

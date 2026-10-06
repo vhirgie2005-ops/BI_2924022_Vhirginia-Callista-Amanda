@@ -1,0 +1,62 @@
+// =============================================================
+// M07_MEASURES - SumbarMart 360
+// Disesuaikan dengan model Power BI pada screenshot pengguna.
+// Tabel yang digunakan: Fact_Sales dan _Measures.
+// Sumber rumus P07_Measures.dax dari dosen.
+// =============================================================
+//
+// CATATAN PENTING:
+// - Buat measure di tabel _Measures.
+// - Nama measure P07 di bawah menggunakan Bahasa Indonesia agar tidak
+//   bertabrakan dengan measure berbahasa Inggris yang sudah terlihat
+//   pada model pengguna (Total Sales, Gross Profit, Orders, dll.).
+// - Beberapa measure memiliki fungsi yang mirip dengan measure yang sudah ada.
+//   Jangan buat ulang jika dosen meminta satu definisi KPI saja.
+// - Format Margin Laba dan Return Rate P07 sebagai Percentage (%).
+// =============================================================
+
+Total Penjualan =
+SUM ( Fact_Sales[Revenue] )
+
+Total Laba =
+SUM ( Fact_Sales[Profit] )
+
+Margin Laba =
+DIVIDE ( [Total Laba], [Total Penjualan], 0 )
+
+Jumlah Transaksi =
+DISTINCTCOUNT ( Fact_Sales[Transaction_ID] )
+
+Unit Terjual =
+SUM ( Fact_Sales[Quantity] )
+
+Rata-rata Kepuasan =
+AVERAGE ( Fact_Sales[Satisfaction_Score] )
+
+Jumlah Retur =
+CALCULATE (
+    [Jumlah Transaksi],
+    Fact_Sales[Return_Flag] = "Ya"
+)
+
+Return Rate P07 =
+DIVIDE ( [Jumlah Retur], [Jumlah Transaksi], 0 )
+
+// =============================================================
+// PEMETAAN DENGAN MEASURE YANG SUDAH TERLIHAT DI POWER BI
+// =============================================================
+// Total Penjualan       mirip dengan [Total Sales]
+// Total Laba            memakai kolom Fact_Sales[Profit]
+// Margin Laba           mirip dengan [Profit Margin], tetapi menggunakan
+//                       Total Laba dari kolom Profit secara langsung
+// Jumlah Transaksi      mirip dengan [Orders]
+// Rata-rata Kepuasan    mirip dengan [Avg Satisfaction]
+// Return Rate P07       mirip dengan [Return Rate]
+//
+// Perbedaan definisi penting:
+// [Gross Profit] yang sudah ada di model dihitung sebagai
+// [Total Sales] - [Total Cost] sesuai P05.
+// [Total Laba] di file P07 menjumlahkan Fact_Sales[Profit] secara langsung.
+// Jangan menganggap kedua nilai tersebut pasti sama. Bandingkan sebelum
+// memilih KPI yang akan dipakai pada visualisasi.
+// =============================================================
