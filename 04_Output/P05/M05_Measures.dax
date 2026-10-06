@@ -1,0 +1,6 @@
+// Selamat datang di tampilan kueri DAX! Pelajari selengkapnya tentang kueri DAX di https://aka.ms/dax-queries.
+// Klik kanan pada tabel, kolom, atau ukuran di panel data untuk mengakses kueri cepat, atau minta bantuan Copilot untuk menulis DAX.
+
+// Pilih "Jalankan" untuk mencoba kueri DAX sampel ini.
+EVALUATE
+    TOPN(100, 'stg_Fact_Sales_Raw')
